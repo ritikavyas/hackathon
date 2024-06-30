@@ -1,0 +1,427 @@
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #000;
+    /* Black background color */
+    color: #39ff14;
+    /* Neon green text color */
+    background-image: url("images/0AAC7360-399F-4540-B77C-89DB09FD194F_1_201_a.jpeg"),
+        url("images/prudential image.png"),
+        url("images/comcast image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Ensure background covers entire viewport */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+header {
+    background-color: rgba(235, 239, 240, 0.5);
+    /* Semi-transparent black background */
+    color: #39ff14;
+    /* Neon green text color */
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 25px;
+    width: 100%;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    /* Add padding to the nav for spacing */
+}
+
+header nav .logo {
+    max-width: 200px;
+    /* Adjust logo size */
+    margin-left: 20px;
+    /* Add margin to the left of the logo */
+}
+
+header nav .logo img {
+    width: 100%;
+    /* Make the logo image width 100% of its container */
+    height: auto;
+    /* Automatically adjust height to maintain aspect ratio */
+    display: block;
+    /* Ensure it behaves as a block element */
+    object-fit: cover;
+    /* Cover the entire area of the container */
+}
+
+
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 20px;
+    /* Adjust space between menu items */
+}
+
+header nav ul li a {
+    color: #39ff14;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: white;
+}
+
+main {
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Align items to the left */
+}
+
+section {
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #39ff14;
+    /* Neon green text color for all headings */
+}
+
+p,
+li {
+    color: #fff;
+    /* White text color */
+    line-height: 1.6;
+}
+
+form label {
+    color: #39ff14;
+    /* Neon green text color for form labels */
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="submit"] {
+    color: #000;
+    /* Black text color for form inputs */
+    background-color: #39ff14;
+    /* Neon green background for form inputs */
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #2ecc71;
+    /* Lighter green on hover */
+}
+
+#sponsors {
+    text-align: center;
+    /* Center align the section content */
+}
+
+#sponsors ul {
+    display: flex;
+    justify-content: center;
+    /* Center items horizontally */
+    list-style: none;
+    padding: 0;
+}
+
+#sponsors ul li {
+    width: 100px;
+    /* Set a fixed width for all list items */
+    margin: 0 10px;
+    /* Adjust spacing between images */
+}
+
+#sponsors ul li img {
+    width: 100%;
+    /* Ensure the image takes up the entire width of its container */
+    height: auto;
+    /* Maintain aspect ratio */
+    max-width: 100px;
+    /* Limit maximum width to prevent stretching */
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #282c34;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3em;
+    background: linear-gradient(to right, #39ff14, #37d9c7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.faq {
+    background-color: #000;
+    /* Black background for the entire box */
+    border: 2px solid #39ff14;
+    /* Neon green border */
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.faq:hover {
+    background-color: #111;
+    /* Slightly darker background on hover */
+    border-color: #2ecc71;
+    /* Lighter green border on hover */
+}
+
+.faq h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #fff;
+    /* White text color */
+}
+
+.faq p {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #eee;
+    /* Light gray text color */
+}
+
+.arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid #fff;
+    /* White arrow */
+    margin-left: auto;
+    transition: transform 0.3s;
+}
+
+.faq.active .arrow {
+    transform: rotate(180deg);
+}
+
+.content {
+    background-color: #000;
+    /* Black background for the content area */
+    padding: 10px;
+    /* Padding inside the content area */
+    color: #fff;
+    /* White text color */
+    display: none;
+}
+
+
+
+.faq.active .content {
+    display: block;
+}
+
+.card {
+    position: relative;
+    width: 400px;
+    padding: 30px;
+    border: 2px solid #39ff14;
+    /* Neon green border */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+    /* Neon green box shadow */
+}
+
+.card form h1 {
+    text-align: center;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 40px;
+}
+
+
+
+.card form .input-box {
+    width: 100%;
+    height: 45px;
+    position: relative;
+    margin: 30px 0;
+}
+
+.card form .input-box input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 4px solid #fff;
+    padding: 0 15px;
+    color: #eee;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.card form .input-box i {
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.card form .input-box input::placeholder {
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.card form .link {
+    display: flex;
+    margin: -15px 0 15px;
+    justify-content: space-between;
+}
+
+.card form .link label {
+    color: #eee;
+    text-transform: capitalize;
+    letter-spacing: .7px;
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.card form .link a {
+    color: #39ff14;
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: capitalize;
+    transition: .3s ease;
+}
+
+.card form .link a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.card .btn button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: #39ff14;
+    font-size: 22px;
+    text-transform: capitalize;
+    border-radius: 10px;
+    font-weight: 700;
+    margin: 10px 0 20px;
+    transition: .3s ease;
+    cursor: pointer;
+    color: #222;
+}
+
+.card .btn button:hover {
+    background-color: #eaeaea;
+}
+
+.card .account {
+    text-align: center;
+}
+
+.card .account p {
+    color: #eee;
+    font-size: 17px;
+    text-transform: capitalize;
+}
+
+.card .account p a {
+    color: #39ff14;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    transition: .4s ease;
+}
+
+.card .account p a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+footer {
+    background-color: rgba(235, 239, 240, 0.5);
+    /* Semi-transparent black background for footer */
+    color: #fff;
+    /* White text color for footer */
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.social-links {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.social-links a {
+    margin: 0 15px;
+    /* Increased margin for better spacing */
+    color: #39ff14;
+    font-size: 2.5rem;
+    /* Adjust the font size to increase the icon size */
+    transition: color 0.3s ease;
+    /* Smooth transition for color change */
+}
+
+.social-links a:hover {
+    color: white;
+    /* Change color to white on hover */
+}
